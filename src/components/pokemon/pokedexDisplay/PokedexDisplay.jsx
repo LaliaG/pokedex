@@ -1,6 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
 import classes from "./Pokedex.module.css"
-import { changeDisplayPokedex } from "../pokemonSlice";
+import { changeDisplayPokedex } from "../pokemonSlice"
+import { StyleSheet, Text, View, Image } from 'react-native'
 
 const PokedexDisplay = () => {
     const pokedex = useSelector(state => state.pokemons.pokedex)
@@ -24,3 +25,13 @@ const PokedexDisplay = () => {
 }
  
 export default PokedexDisplay;
+const styles = StyleSheet.create({
+    .content {
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: #cce5ff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+  })
