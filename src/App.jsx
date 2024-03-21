@@ -16,7 +16,7 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="PokemonDetails" component={PokemonDetailsScreen}/>
-          <Stack.Screen name="MyCollection" component={MyCollectionScreen} />
+          {/* <Stack.Screen name="MyCollection" component={MyCollectionScreen} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

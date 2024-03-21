@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
-import PokedexDisplay from '../components/pokemon/pokedexDisplay/PokedexDisplay';
-// import PokedexDisplay from '../components/pokemon/pokedexDisplay/PokedexDisplay'
 
 
 export default function MyCollectionScreen() {

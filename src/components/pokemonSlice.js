@@ -1,6 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
+
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
 
 export const fetchPokemons = createAsyncThunk(
@@ -18,6 +20,8 @@ export const fetchPokemons = createAsyncThunk(
         });
       })
     );
+
+    console.log(pokemons);
 
     return pokemons;
   }
@@ -55,9 +59,7 @@ const pokemonSlice = createSlice({
     changeDisplayPokedex: (state) => {
       state.displayPokedex = !state.displayPokedex;
     },
-    clearPokedex: (state) => {
-      state.pokedex = [];
-    },
+   
     setFilteredPokemons: (state, action) => {
       state.filteredPokemons = action.payload;
     },
@@ -76,7 +78,7 @@ const pokemonSlice = createSlice({
 export const {
   addPokedex,
   changeDisplayPokedex,
-  clearPokedex,
+ 
   setFilteredPokemons,
 } = pokemonSlice.actions;
 export default pokemonSlice.reducer;

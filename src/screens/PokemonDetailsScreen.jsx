@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import PokemonDisplay from '../components/pokemon/pokemonDisplay/PokemonDisplay'
 import CaptureButton from '../components/CaptureButton'
 
 export default function PokemonDetailsScreen({ navigation, route }) {
@@ -11,7 +10,6 @@ export default function PokemonDetailsScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Pokemon Details Screen</Text>
-      <PokemonDisplay /> {/* Affichez le composant PokemonDisplay */}
       <CaptureButton pokemon={pokemon} /> {/* Utilisation de CaptureButton */}
       {capturedPokemons.includes(pokemon.id) && <Text style={styles.text}>This Pokémon is captured!</Text>}
     </View>
